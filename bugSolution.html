@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Correct way to access an attribute, handle null properly
+    const element = document.getElementById("myDiv");
+    if (element) {
+        const attributeValue = element.getAttribute("data-test");
+        console.log(attributeValue); // Outputs null if attribute doesn't exist
+        console.log(element.textContent);
+
+    } else {
+        console.error("Element with id 'myDiv' not found");
+    }
+
+    //Always check that an element exists before interacting with it
+    if(element){
+        element.setAttribute("data-test","test");
+    }
+  </script>
+</body>
+</html>
