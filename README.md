@@ -1,0 +1,1 @@
+This repository demonstrates a couple of uncommon bugs that can occur in HTML.  The first is trying to access a non-existent attribute of an element. The second is accessing an element that might not exist.  The `bug.html` file contains the buggy code, while `bugSolution.html` provides a corrected version with proper error handling and null checks.
